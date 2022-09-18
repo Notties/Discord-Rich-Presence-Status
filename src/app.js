@@ -1,4 +1,4 @@
-const clientId = "APPLICATION ID"; //APPLICATION ID
+const clientId = "APPLICATION ID"; //APPLICATION ID || CLIENT ID
 const DiscordRPC = require("discord-rpc");
 const browser = typeof window !== 'undefined';
 const RPC = new DiscordRPC.Client({ transport: browser ? "websocket" : "ipc"});
