@@ -1,24 +1,29 @@
-const clientId = "1020937367525265408";
+const clientId = "APPLICATION ID"; //APPLICATION ID
 const DiscordRPC = require("discord-rpc");
-const RPC = new DiscordRPC.Client({ transport: "ipc" });
+const browser = typeof window !== 'undefined';
+const RPC = new DiscordRPC.Client({ transport: browser ? "websocket" : "ipc"});
 
 DiscordRPC.register(clientId);
 
 async function setActivity() {
   if (!RPC) return;
   RPC.setActivity({
-    details: `Knot Presence`,
-    state: `Playing with Test Discord RPC`,
+    details: `Details presence`,
+    state: `State presence`,
     startTimestamp: Date.now(),
-    largeImageKey: `logo`,
-    largeImageText: `largeImageText`,
-    smallImageKey: `logo`,
-    smallImageText: `smallImageText.`,
+    largeImageKey: `large image assets`,
+    largeImageText: `text large image assets`,
+    smallImageKey: `small image assets`,
+    smallImageText: `text small image assets`,
     instance: false,
     buttons: [
       {
-        label: `Text Button`,
-        url: `https://www.google.com`,
+        label: `Text button`,
+        url: `your url`,
+      },
+      {
+        label: `Text button`,
+        url: `your url`,
       },
     ],
   });
