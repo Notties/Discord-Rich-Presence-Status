@@ -8,7 +8,7 @@ async function setActivity() {
   if (!RPC) return;
   RPC.setActivity({
     details: `Knot Presence`,
-    state: `Playing with RPC`,
+    state: `Playing with Test Discord RPC`,
     startTimestamp: Date.now(),
     largeImageKey: `logo`,
     largeImageText: `largeImageText`,
@@ -16,10 +16,6 @@ async function setActivity() {
     smallImageText: `smallImageText.`,
     instance: false,
     buttons: [
-      {
-        label: `Text Button`,
-        url: `https://www.google.com`,
-      },
       {
         label: `Text Button`,
         url: `https://www.google.com`,
